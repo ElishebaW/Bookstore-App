@@ -1,3 +1,11 @@
-<hi><%=@books%></hi>
-
-<p> All the books are here</p>
+<div class='row'>
+  <div class='col-xs-6 col-md-3'>
+   <div class='thumbnail'>
+       <%= @books.each do |book| %>
+        <%= book.title %>
+        <%= book.description%>
+       <% end %>
+    </div>
+  </div>
+ </div>
+        
