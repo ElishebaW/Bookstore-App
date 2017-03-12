@@ -3,9 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-#gem 'mysql2'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -25,7 +23,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
-gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -36,11 +33,12 @@ gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :it do
+group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_girl_rails'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -51,3 +49,6 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'
+end
