@@ -1,11 +1,20 @@
-<div class='row'>
-  <div class='col-xs-6 col-md-3'>
-   <div class='thumbnail'>
-       <%= @books.each do |book| %>
-        <%= book.title %>
-        <%= book.description%>
-        <%end%>
-    </div>
-  </div>
- </div>
+<p id="notice"><%= notice %></p>
+<h1> ho</h1>
+<div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        <div  class="panel panel-default">
+            <div class= "panel-heading center"></div><%= image_tag @book.image.url (:medium)%></div>
+            <div class="panel-body">
+          <strong>Nerd Book</strong>
+          <%= @book.description%></br>
+          <%= @book.title%></br>   
+          <% if @book.user == current_user %>
+          <%= link_to 'Edit', edit_book_path(@book) %> |
+          <% end %>
+          <%= link_to 'Back', books_path %>
+           <div>
+        </div>
+     </div>
+</div>
+
         

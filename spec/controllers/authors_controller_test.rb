@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BooksControllerTest < ActionController::TestCase
+class AuthorsControllertest < ActionController::testCase
   test "should get new" do
     get :new
     assert_response :success
@@ -16,13 +16,13 @@ class BooksControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit
+  test "should get destroy" do
+    get :destroy
     assert_response :success
   end
 
-  test "should get destroy" do
-    get :destroy
+  test "should get edtest" do
+    get :edtest
     assert_response :success
   end
 

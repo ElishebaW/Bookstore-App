@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AuthorsControllerTest < ActionController::TestCase
+class CategoriesControllertest < ActionController::testCase
   test "should get new" do
     get :new
     assert_response :success
@@ -21,8 +21,8 @@ class AuthorsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit
+  test "should get edtest" do
+    get :edtest
     assert_response :success
   end
 

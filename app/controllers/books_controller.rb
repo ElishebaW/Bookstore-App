@@ -4,11 +4,12 @@ class BooksController < ApplicationController
   end
 
   def create
-    @books = Book.new
-  if @books.save
-    redirect_to new_book_path
-  end
-   
+   @books = current_user.books.build(book_params)
+      if @book.save
+        redirect_to @book, notice: 'Book was successfully created.' 
+      else
+        render action: 'new'
+      end
   end
 
   def update
