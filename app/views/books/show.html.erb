@@ -1,20 +1,17 @@
-<p id="notice"><%= notice %></p>
-<%= render 'welcomes/welcome' %>
-    <div class="row">
-        <div class="col-md-offset-2 col-md-8">
+<div class="row">
+    <div class="col-md-offset-2 col-md-8">
         <div  class="panel panel-default">
         <div class= "panel-heading center"></div>
         <div class="panel-body">
-              <strong>Nerd Book</strong>
+              <strong><%= @book.title %></strong></br>
               <%= @book.description %></br>
-              <%= @book.title %></br>   
               <% if @book.user_id == current_user %></br>
               <%= link_to 'Edit', edit_book_path(@book) %> |
-              <% end %>
               <%= link_to 'Back', books_path %>
+              <% end %>
            <div>
         </div>
      </div>
+  </div>
 </div>
-
         
