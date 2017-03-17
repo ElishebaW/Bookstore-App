@@ -1,2 +1,18 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<div class="panel panel-default">
+  <div class="panel-heading"><h2>Edit the novel in which you created</h2></div>
+   <div class="panel-body">
+     <%= form_for Book.new do |f| %>
+           <div class= "form group">
+               <%= f.label :title %> 
+               <%= f.text_field :title , autofocus: true, class: "form control" %></br>
+       
+               <%= f.label :description %>
+               <%= f.text_area:description ,autofocus: true, class: "form control"%>
+            </div>  
+             <div class="actions">
+              <%= f.submit "Edit", class:"btn btn-success" %>
+             </div>
+      <%end%>
+     </div>   
+   </div>
+ </div>

@@ -38,4 +38,19 @@ describe BooksControllerit < ActionController::itCase do
       expect( @books).to eq(Book.find(params[:id]))
     end
   end
+  
+describe "user log in" do
+  it "allows an existing user to sign in" do
+    User.create!(email: "me@home.com", password: "watching the telly")
+
+    visit "/users/sign_in"
+
+    fill_in "Email", with: "me@example.com"
+    fill_in "Password", with: "watching the telly"
+
+    click_button "Sign in"
+
+    expect(page).to have_content("Signed in successfully.")
+  end
+end
 end

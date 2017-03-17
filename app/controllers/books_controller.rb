@@ -17,16 +17,23 @@ class BooksController < ApplicationController
   end
 
   def update
+      if @book.update(pin_params)
+        redirect_to @book, notice: 'Pin was successfully updated.' 
+      else
+        render action: 'edit'
+      end
   end
-
+  
   def edit
   end
-
+  
   def destroy
+    @book.destroy
+     redirect_to books_url
   end
 
   def index
-    @books = Book.all
+    @books = Book.all.order("created_at DESC")
   end
 
 
