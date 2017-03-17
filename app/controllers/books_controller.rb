@@ -25,6 +25,7 @@ class BooksController < ApplicationController
   end
   
   def edit
+     
   end
   
   def destroy
@@ -33,19 +34,19 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all.order("created_at DESC")
+    @book = Book.all.order("created_at DESC")
   end
 
 
   def show
-    @books = Book.find(params[:id])
+    @book = Book.find(params[:id])
   end
 end
 
 private
   
   def set_book
-      @book = Book.find(params[:id])
+      @book = Book.find_by(id: params[:id])
   end
 
   def book_params
