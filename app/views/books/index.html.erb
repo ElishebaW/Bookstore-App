@@ -7,7 +7,8 @@
               <strong><%= book.title %></strong></br>
               <%= book.description %></br>
               <%= link_to 'Edit', edit_book_path(book) %> |
-              <%= link_to 'Back', new_book_path %>
+              <%= link_to 'Back', books_path %> |
+              <%= link_to 'Delete',book, method: :delete, data: { confirm: "You sure?" } %>
           </div>
         </div>
        </div>

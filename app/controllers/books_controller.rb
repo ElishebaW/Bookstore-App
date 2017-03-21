@@ -17,20 +17,21 @@ class BooksController < ApplicationController
   end
 
   def update
-      if @book.update(pin_params)
-        redirect_to @book, notice: 'Pin was successfully updated.' 
+      if @book.update(book_params)
+        redirect_to @book, notice: 'Book was successfully updated.' 
       else
         render action: 'edit'
       end
   end
   
   def edit
-     
+    @book = Book.find(params[:id])
   end
   
   def destroy
-    @book.destroy
-     redirect_to books_url
+    Book.find(params[:id]).destroy
+    flash[:success] = "Book deleted"
+    redirect_to books_url
   end
 
   def index
