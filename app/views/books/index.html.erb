@@ -1,16 +1,16 @@
   <% @book.each do |book| %>
   <div class="row">
-  <div class="col-md-offset-2 col-md-8">
-  <div class="panel panel-default">
-  <div class= "panel-heading center">
-  <div class="panel-body">
-  <strong><%= book.title %></strong></br>
-  <%= book.description %></br>
-  <%= link_to 'Edit', edit_book_path(book) %> |
-  <%= link_to 'Back', new_book_path %>
+    <div class="col-md-offset-2 col-md-8">
+      <div class="panel panel-default">
+        <div class= "panel-heading center">
+          <div class="panel-body">
+              <strong><%= book.title %></strong></br>
+              <%= book.description %></br>
+              <%= link_to 'Edit', edit_book_path(book) %> |
+              <%= link_to 'Back', new_book_path %>
+          </div>
+        </div>
+       </div>
+     </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <% end %>
+<% end %>
