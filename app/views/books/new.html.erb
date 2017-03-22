@@ -2,7 +2,6 @@
   <div class="panel-heading"><h2>Add a Book to the Repository</h2></div>
    <div class="panel-body">
      <%= form_for Book.new do |f| %>
-        <form>
            <div class= "form group">
                <%= f.label :title, class: "col-xs-12 col-md-1" %> 
                <%= f.text_field :title , autofocus: true, class: "form control",  :size => "51.5" %>
@@ -15,7 +14,6 @@
              <div class="actions">
               <%= f.submit "Create", class:"btn btn-success" %>
              </div>
-         </form>
       <%end%>
      </div>   
    </div> 

@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   devise_for :users
   resources :publishers
   resources :author
   resources :categories
   resources :books
   resources :about
+  resources :password_resets,     only: [:new, :create, :edit, :update]
   
   root 'welcomes#index'
   # The priority is based upon order of creation: first created -> highest priority.
