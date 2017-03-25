@@ -40,6 +40,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'sqlite3'
   gem 'paperclip', '~> 5.1'
+  gem 'capybara', '~> 2.13'
 end
 
 group :development do
