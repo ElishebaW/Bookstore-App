@@ -29,3 +29,11 @@ it:
 production:
   <<: *default
   database: db/production.sqlite3
+  
+test:
+  <<: *default
+  adapter: sqlite3
+  database: bookstore_it
+  username: bookstore
+  password: bookstore
+
